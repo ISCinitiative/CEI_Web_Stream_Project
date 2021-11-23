@@ -1810,7 +1810,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "SPACE WEATHER":
                  
 if SELECTBOX_SIDEBAR_GENERAL == "GENERAL DISASTERS PORTAL":
     
-    st.image(COL_ND_HEADER_IMAGE,width=50)
+    
     st.header("NATURAL DISASTERS TRACKING PANEL")
     st.markdown("_CEI was established by ISCI-LAB_")
 
