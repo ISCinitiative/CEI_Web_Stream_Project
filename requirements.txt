@@ -6,7 +6,7 @@ folium==0.12.1
 opencv-python-headless==4.5.4.60
 plotly==5.3.1
 matplotlib==3.2.2
-urllib.request==3.8
+urllib==3.8
 streamlit-folium==0.4.0
 streamlit==0.81.0
 numpy==1.20.2
