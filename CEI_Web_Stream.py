@@ -21,12 +21,12 @@ st.set_page_config(page_title="CEI PORTAL",layout="wide",
                    initial_sidebar_state="expanded")
 
 
-MAIN_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/BLACK_HEADER.png")
+"""MAIN_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/BLACK_HEADER.png")
 SUB_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/BANNER.jpg")
 COL_VIS_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/SECURITY_CREW.png")
 COL_SW_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/RED_WARNING_PNG.png")
 COL_ND_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/SPEAK_CREW_PNG.png")
-COL_GS_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/MATH_CREW_PNG.png")
+COL_GS_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/MATH_CREW_PNG.png")"""
 
 
 
@@ -984,14 +984,14 @@ SELECTBOX_SIDEBAR_GENERAL = st.sidebar.selectbox(
 
 if SELECTBOX_SIDEBAR_GENERAL == "HOME":
     
-    st.image(MAIN_HEADER_IMAGE,width=48)
+    
     st.header("INTERNATIONAL SPACE SCIENCE AND CLIMATE OBSERVATION INITIATIVE - ISCI")
     st.markdown("ISCI-Lab was established by ISCI")
     
     COL_VIS, COL_SW, COL_ND, COL_GS = st.columns(4)
     
     with COL_VIS:
-        st.image(COL_VIS_HEADER_IMAGE,use_column_width=True)
+        
         st.subheader("WHY WE EXIST")
         st.write("""                  
 We are an initiative that conducts studies in the field of Space Science, publishes projects and reports, offers analytical perspectives and data analysis to stop the global climate catastrophe.
@@ -1000,7 +1000,7 @@ We believe that science changes the future. We want to host all the projects, st
 """)
 
     with COL_SW:
-        st.image(COL_SW_HEADER_IMAGE,use_column_width=True)
+        
         st.subheader("SOLAR ACTIVITIES PANEL")
         st.write("""
                  Under this panel, there are solar and earth magnetosphere activities with various analyzes.
@@ -1010,7 +1010,7 @@ We believe that science changes the future. We want to host all the projects, st
                  """)
                  
     with COL_ND:
-        st.image(COL_ND_HEADER_IMAGE,use_column_width=True)
+        
         st.subheader("NATURAL DISASTERS PANEL")
         st.write("""
                   This section shows disasters happening all over the planet and the data is in real time.
@@ -1018,7 +1018,7 @@ We believe that science changes the future. We want to host all the projects, st
                   Various reliable sources and databases are used in this section.
                  """)
     with COL_GS:
-        st.image(COL_GS_HEADER_IMAGE,use_column_width=True)
+        
         st.subheader("CLIMATIC PARAMETERS")
         st.write("""
                   Data from all satellites (LEO) in the near orbital plane are analyzed and visualized in this section.
@@ -1029,7 +1029,7 @@ We believe that science changes the future. We want to host all the projects, st
                  
     
     
-    st.image(SUB_HEADER_IMAGE,use_column_width=True)   
+     
     st.header("THE GUARDIANS OF THE UNIVERSE")         
     SUB_COL_1,SUB_COL_2=st.columns(2)
     
@@ -1079,7 +1079,7 @@ We believe that science changes the future. We want to host all the projects, st
     
 if SELECTBOX_SIDEBAR_GENERAL == "SPACE WEATHER":
     
-    st.image(COL_SW_HEADER_IMAGE,width=50)
+    
     st.header("SPACE WEATHER PANEL")
     st.markdown("_CEI was established by ISCI-LAB_")
     
@@ -1817,7 +1817,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "SPACE WEATHER":
                  
 if SELECTBOX_SIDEBAR_GENERAL == "GENERAL DISASTERS PORTAL":
     
-    st.image(COL_ND_HEADER_IMAGE,width=50)
+    
     st.header("NATURAL DISASTERS TRACKING PANEL")
     st.markdown("_CEI was established by ISCI-LAB_")
 
@@ -2828,7 +2828,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "GENERAL DISASTERS PORTAL":
 
 if SELECTBOX_SIDEBAR_GENERAL == "CYCLONE - FLOOD":
     
-    st.image(MAIN_HEADER_IMAGE,width=50)
+    
     st.header("CYCLONE AND FLOOD TRACKING PANEL")
     st.markdown("**All satellite images are in real time. You can detect the formations by enlarging the images**")
     st.markdown("_CEI was established by ISCI-LAB_")
@@ -3269,7 +3269,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "CYCLONE - FLOOD":
 
 if SELECTBOX_SIDEBAR_GENERAL == "VOLCANO - EARTHQUAKE":
     
-    st.image(MAIN_HEADER_IMAGE,width=50)
+    
     st.header("VOLCANO AND EARTHQUAKE TRACKING PANEL")
     st.markdown("_CEI was established by ISCI-LAB_")
     
@@ -3390,7 +3390,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "VOLCANO - EARTHQUAKE":
 
 if SELECTBOX_SIDEBAR_GENERAL == "INTERACTIVE SEARCHING":
     
-    st.image(MAIN_HEADER_IMAGE,width=50)
+    
     st.header("INTERACTIVE SEARCHING PANEL")
     st.markdown("_CEI was established by ISCI-LAB_")
     
@@ -3747,17 +3747,10 @@ if SELECTBOX_SIDEBAR_GENERAL == "INTERACTIVE SEARCHING":
                 
 if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
     
-    COL_IMA,COL_HEA = st.columns(2)
-    
-    with COL_IMA:
         
-        st.image(MAIN_HEADER_IMAGE,width=170)
-        
-    with COL_HEA:
-        
-        st.header("LOCAL ALERT PANEL")
-        st.markdown("*This section contains the meteorological warning of each country. Other countries will be added as the development phase continues.*")
-        st.markdown("_CEI was established by ISCI-LAB_")
+    st.header("LOCAL ALERT PANEL")
+    st.markdown("*This section contains the meteorological warning of each country. Other countries will be added as the development phase continues.*")
+    st.markdown("_CEI was established by ISCI-LAB_")
         
         
     
@@ -4339,7 +4332,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
         
 if SELECTBOX_SIDEBAR_GENERAL == "CLIMATIC PARAMETERS":
     
-    st.image(COL_GS_HEADER_IMAGE,width=50)
+    
     st.header("CLIMATIC PARAMETERS PANEL")
     st.markdown("_CEI was established by ISCI-LAB_")
     
@@ -4960,7 +4953,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "CLIMATIC PARAMETERS":
    
 if SELECTBOX_SIDEBAR_GENERAL == "REPORT A DISASTER":
     
-    st.image(MAIN_HEADER_IMAGE,width=50)
+    
     st.header("REPORT A DISASTER")
     st.markdown("**Please report natural disasters that you are sure of. If you are in a dangerous situation, please inform us about your situation in detail.**")
     st.markdown("_CEI was established by ISCI-LAB_")
