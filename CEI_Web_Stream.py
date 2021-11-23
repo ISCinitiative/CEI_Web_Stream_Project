@@ -2821,7 +2821,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "GENERAL DISASTERS PORTAL":
 
 if SELECTBOX_SIDEBAR_GENERAL == "CYCLONE - FLOOD":
     
-    st.image(MAIN_HEADER_IMAGE,width=50)
+    
     st.header("CYCLONE AND FLOOD TRACKING PANEL")
     st.markdown("**All satellite images are in real time. You can detect the formations by enlarging the images**")
     st.markdown("_CEI was established by ISCI-LAB_")
@@ -3262,7 +3262,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "CYCLONE - FLOOD":
 
 if SELECTBOX_SIDEBAR_GENERAL == "VOLCANO - EARTHQUAKE":
     
-    st.image(MAIN_HEADER_IMAGE,width=50)
+    
     st.header("VOLCANO AND EARTHQUAKE TRACKING PANEL")
     st.markdown("_CEI was established by ISCI-LAB_")
     
@@ -3744,7 +3744,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
     
     with COL_IMA:
         
-        st.image(MAIN_HEADER_IMAGE,width=170)
+        st.header("CEI")
         
     with COL_HEA:
         
@@ -5012,4 +5012,3 @@ if SELECTBOX_SIDEBAR_GENERAL == "REPORT A DISASTER":
         
         st.warning("THERE IS A CONNECTION PROBLEM, PLEASE TRY AGAIN")
     
- 
