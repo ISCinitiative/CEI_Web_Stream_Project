@@ -5000,7 +5000,6 @@ if SELECTBOX_SIDEBAR_GENERAL == "REPORT A DISASTER":
           <input type="hidden" name="_template" value="box">
           <input type="hidden" name="_captcha" value="true">
           <input type="hidden" name="_autoresponse" value="Your message has been forwarded to us,make sure you are safe and heed the warnings from authorities.">
-          <input type="hidden" name="_cc" value="brisdncer@protonmail.com">
           <button class="btn danger" type="submit">Send</button>
           </table>
         </form>
