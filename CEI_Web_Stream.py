@@ -22,6 +22,7 @@ st.set_page_config(page_title="CEI PORTAL",layout="wide",
 
 
 
+
 try:
     
     LASCO_C2_IMAGE = Image.open(requests.get("https://soho.nascom.nasa.gov/data/realtime/c2/512/latest.jpg",
@@ -978,7 +979,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "HOME":
     
     
     st.header("INTERNATIONAL SPACE SCIENCE AND CLIMATE OBSERVATION INITIATIVE - ISCI")
-    st.markdown("_ISCI-Lab was established by ISCI_")
+    st.markdown("ISCI-Lab was established by ISCI")
     
     COL_VIS, COL_SW, COL_ND, COL_GS = st.columns(4)
     
@@ -1021,7 +1022,7 @@ We believe that science changes the future. We want to host all the projects, st
                  
     
     
-     
+      
     st.header("THE GUARDIANS OF THE UNIVERSE")         
     SUB_COL_1,SUB_COL_2=st.columns(2)
     
@@ -1809,7 +1810,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "SPACE WEATHER":
                  
 if SELECTBOX_SIDEBAR_GENERAL == "GENERAL DISASTERS PORTAL":
     
-    
+    st.image(COL_ND_HEADER_IMAGE,width=50)
     st.header("NATURAL DISASTERS TRACKING PANEL")
     st.markdown("_CEI was established by ISCI-LAB_")
 
@@ -2820,7 +2821,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "GENERAL DISASTERS PORTAL":
 
 if SELECTBOX_SIDEBAR_GENERAL == "CYCLONE - FLOOD":
     
-    
+    st.image(MAIN_HEADER_IMAGE,width=50)
     st.header("CYCLONE AND FLOOD TRACKING PANEL")
     st.markdown("**All satellite images are in real time. You can detect the formations by enlarging the images**")
     st.markdown("_CEI was established by ISCI-LAB_")
@@ -3261,7 +3262,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "CYCLONE - FLOOD":
 
 if SELECTBOX_SIDEBAR_GENERAL == "VOLCANO - EARTHQUAKE":
     
-    
+    st.image(MAIN_HEADER_IMAGE,width=50)
     st.header("VOLCANO AND EARTHQUAKE TRACKING PANEL")
     st.markdown("_CEI was established by ISCI-LAB_")
     
@@ -3738,10 +3739,20 @@ if SELECTBOX_SIDEBAR_GENERAL == "INTERACTIVE SEARCHING":
 
                 
 if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
-
-    st.header("LOCAL ALERT PANEL")
-    st.markdown("*This section contains the meteorological warning of each country. Other countries will be added as the development phase continues.*")
-    st.markdown("_CEI was established by ISCI-LAB_")
+    
+    COL_IMA,COL_HEA = st.columns(2)
+    
+    with COL_IMA:
+        
+        st.image(MAIN_HEADER_IMAGE,width=170)
+        
+    with COL_HEA:
+        
+        st.header("LOCAL ALERT PANEL")
+        st.markdown("*This section contains the meteorological warning of each country. Other countries will be added as the development phase continues.*")
+        st.markdown("_CEI was established by ISCI-LAB_")
+        
+        
     
     st.markdown("_Select country to check latest alerts_")
     SELECT_COUNTRY = st.selectbox("COUNTRIES",("BELGIUM",
@@ -4989,6 +5000,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "REPORT A DISASTER":
           <input type="hidden" name="_template" value="box">
           <input type="hidden" name="_captcha" value="true">
           <input type="hidden" name="_autoresponse" value="Your message has been forwarded to us,make sure you are safe and heed the warnings from authorities.">
+          <input type="hidden" name="_cc" value="brisdncer@protonmail.com">
           <button class="btn danger" type="submit">Send</button>
           </table>
         </form>
@@ -5000,3 +5012,4 @@ if SELECTBOX_SIDEBAR_GENERAL == "REPORT A DISASTER":
         
         st.warning("THERE IS A CONNECTION PROBLEM, PLEASE TRY AGAIN")
     
+ 
