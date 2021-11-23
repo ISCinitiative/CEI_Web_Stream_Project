@@ -6,7 +6,7 @@ from plotly.subplots import make_subplots
 import numpy as np
 from PIL import Image
 from bs4 import BeautifulSoup
-import urllib
+import urllib.request
 import requests
 import pandas as pd
 import time
