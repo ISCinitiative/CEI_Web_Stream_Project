@@ -282,7 +282,7 @@ def EUROPE_REGION_ALERT(country_type=str):
     
     URL_TARGET = f"https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-{country_type}"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
 
     AREA_TARGET = "cap:areadesc"
@@ -310,7 +310,7 @@ def EUROPE_REGION_ALERT(country_type=str):
 def BRAZIL_REGION_ALERT():
     URL_TARGET = "https://apiprevmet3.inmet.gov.br/avisos/rss"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     ITEM_ALL_CLASS = SOUP_TARGET.find_all("item")
     
@@ -350,7 +350,7 @@ def BRAZIL_REGION_ALERT():
 def CHINA_REGION_ALERT():
     URL_TARGET = "http://alert-feed.worldweather.org/cn-cma-xx/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -382,7 +382,7 @@ def ECUADOR_REGION_ALERT():
     
     URL_TARGET = "https://cap-sources.s3.amazonaws.com/ec-inamhi-es/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -414,7 +414,7 @@ def GUYANA_REGION_ALERT():
     
     URL_TARGET = "https://hydromet.gov.gy/cap/en/alerts/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -446,7 +446,7 @@ def HONG_KONG_REGION_ALERT():
     
     URL_TARGET = "https://alerts.weather.gov.hk/V1/cap_atom.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
 
 
     AREA_URGENCY = "cap:urgency"
@@ -467,7 +467,7 @@ def INDIA_REGION_ALERT():
     
     URL_TARGET = "https://cap-sources.s3.amazonaws.com/in-imd-en/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -501,7 +501,7 @@ def INDONESIA_REGION_ALERT():
     
     URL_TARGET = "https://signature.bmkg.go.id/alert/public/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -533,7 +533,7 @@ def KENYA_REGION_ALERT():
     
     URL_TARGET = "https://cap-sources.s3.amazonaws.com/ke-kmd-en/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -565,7 +565,7 @@ def MADAGASCAR_REGION_ALERT():
     
     URL_TARGET = "https://cap-sources.s3.amazonaws.com/mg-meteo-en/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -597,7 +597,7 @@ def MALAVI_REGION_ALERT():
     
     URL_TARGET = "https://cap-sources.s3.amazonaws.com/mw-met-en/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -629,7 +629,7 @@ def MONGOLIA_REGION_ALERT():
     
     URL_TARGET = "https://cap-sources.s3.amazonaws.com/mn-namem-en/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -661,7 +661,7 @@ def OMAN_REGION_TARGET():
     
     URL_TARGET = "https://cap-sources.s3.amazonaws.com/om-met-en/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -692,7 +692,7 @@ def OMAN_REGION_TARGET():
 def RUSSIA_REGION_ALERT():
     URL_TARGET = "https://meteoinfo.ru/hmc-output/cap/cap-feed/en/atom.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     DIV_ALL_CLASS = SOUP_TARGET.find("entry")
     
     FIND_TARGET = DIV_ALL_CLASS.find_all("summary")[-1].text
@@ -712,7 +712,7 @@ def SAUDI_ARABIA_ALERT():
     
     URL_TARGET = "https://ncm.gov.sa/Ar/alert/Pages/feedalerts.aspx"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -743,7 +743,7 @@ def SOUTH_AFRICA_ALERT():
     
     URL_TARGET = "https://caps.weathersa.co.za/Home/RssFeed"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -773,7 +773,7 @@ def SOUTH_AFRICA_ALERT():
 def SURINAME_AFRICA_ALERT():
     URL_TARGET = "https://cap-sources.s3.amazonaws.com/sr-meteo-en/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -805,7 +805,7 @@ def TANZANIA_REGION_ALERT():
     
     URL_TARGET = "https://cap-sources.s3.amazonaws.com/tz-tma-en/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -837,7 +837,7 @@ def TRINIDAD_AND_TOBAGO_ALERT():
     
     URL_TARGET = "http://metproducts.gov.tt/ttms/public/api/feed?type=rss"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -868,7 +868,7 @@ def TRINIDAD_AND_TOBAGO_ALERT():
 def UGANDA_REGION_ALERT():
     URL_TARGET = "https://cap-sources.s3.amazonaws.com/ug-unma-en/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -900,7 +900,7 @@ def ZIMBABWE_REGION_ALERT():
     
     URL_TARGET = "https://cap-sources.s3.amazonaws.com/zw-msd-en/rss.xml"
     REQ_TARGET = requests.get(URL_TARGET).text
-    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"lxml")
+    SOUP_TARGET = BeautifulSoup(REQ_TARGET,"html.parser")
     
     EVENT_LIST = []
     ITEM_ALL_CLASS = SOUP_TARGET.find("item")
@@ -4047,7 +4047,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
                 TARGET_URL = "https://severeweather.wmo.int/rain/"
             
                 TAR_REQ = requests.get(TARGET_URL).text
-                BS_REQ = BeautifulSoup(TAR_REQ,"lxml")
+                BS_REQ = BeautifulSoup(TAR_REQ,"html.parser")
                     
                 Area_ALL = BS_REQ.find_all("area")
                     
@@ -4059,7 +4059,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
                     ALL_PATH_RAIN = TARGET_URL + REP_DOT_RAIN
                         
                     NEW_TAR_REQ = requests.get(ALL_PATH_RAIN).text
-                    BS_NEW_TAR = BeautifulSoup(NEW_TAR_REQ,"lxml")
+                    BS_NEW_TAR = BeautifulSoup(NEW_TAR_REQ,"html.parser")
                     AREA_NEW_ALL = BS_NEW_TAR.find_all("area")
                         
                     for new_all_loop in AREA_NEW_ALL:
@@ -4078,7 +4078,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
                             TOGETGER_ALL_PATH = PATH_WITH_CLEAR + FIN_JAVA_TAR
                                 
                             LAST_NEW_TAR_REQ = requests.get(TOGETGER_ALL_PATH).text
-                            LAST_BS_NEW_TAR = BeautifulSoup(LAST_NEW_TAR_REQ,"lxml")
+                            LAST_BS_NEW_TAR = BeautifulSoup(LAST_NEW_TAR_REQ,"html.parser")
                                 
                             DIV_COOR = LAST_BS_NEW_TAR.find("td")
                                 
@@ -4122,7 +4122,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
                 TARGET_URL = "https://severeweather.wmo.int/thunder/"
             
                 TAR_REQ = requests.get(TARGET_URL).text
-                BS_REQ = BeautifulSoup(TAR_REQ,"lxml")
+                BS_REQ = BeautifulSoup(TAR_REQ,"html.parser")
                     
                 Area_ALL = BS_REQ.find_all("area")
                     
@@ -4134,7 +4134,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
                     ALL_PATH_RAIN = TARGET_URL + REP_DOT_RAIN
                         
                     NEW_TAR_REQ = requests.get(ALL_PATH_RAIN).text
-                    BS_NEW_TAR = BeautifulSoup(NEW_TAR_REQ,"lxml")
+                    BS_NEW_TAR = BeautifulSoup(NEW_TAR_REQ,"html.parser")
                     AREA_NEW_ALL = BS_NEW_TAR.find_all("area")
                         
                     for new_all_loop in AREA_NEW_ALL:
@@ -4153,7 +4153,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
                             TOGETGER_ALL_PATH = PATH_WITH_CLEAR + FIN_JAVA_TAR
                                 
                             LAST_NEW_TAR_REQ = requests.get(TOGETGER_ALL_PATH).text
-                            LAST_BS_NEW_TAR = BeautifulSoup(LAST_NEW_TAR_REQ,"lxml")
+                            LAST_BS_NEW_TAR = BeautifulSoup(LAST_NEW_TAR_REQ,"html.parser")
                                 
                             DIV_COOR = LAST_BS_NEW_TAR.find("td")
                                 
@@ -4198,7 +4198,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
                 TARGET_URL = "https://severeweather.wmo.int/fog/"
             
                 TAR_REQ = requests.get(TARGET_URL).text
-                BS_REQ = BeautifulSoup(TAR_REQ,"lxml")
+                BS_REQ = BeautifulSoup(TAR_REQ,"html.parser")
                     
                 Area_ALL = BS_REQ.find_all("area")
                     
@@ -4210,7 +4210,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
                     ALL_PATH_RAIN = TARGET_URL + REP_DOT_RAIN
                         
                     NEW_TAR_REQ = requests.get(ALL_PATH_RAIN).text
-                    BS_NEW_TAR = BeautifulSoup(NEW_TAR_REQ,"lxml")
+                    BS_NEW_TAR = BeautifulSoup(NEW_TAR_REQ,"html.parser")
                     AREA_NEW_ALL = BS_NEW_TAR.find_all("area")
                         
                     for new_all_loop in AREA_NEW_ALL:
@@ -4229,7 +4229,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
                             TOGETGER_ALL_PATH = PATH_WITH_CLEAR + FIN_JAVA_TAR
                                 
                             LAST_NEW_TAR_REQ = requests.get(TOGETGER_ALL_PATH).text
-                            LAST_BS_NEW_TAR = BeautifulSoup(LAST_NEW_TAR_REQ,"lxml")
+                            LAST_BS_NEW_TAR = BeautifulSoup(LAST_NEW_TAR_REQ,"html.parser")
                                 
                             DIV_COOR = LAST_BS_NEW_TAR.find("td")
                                 
@@ -4273,7 +4273,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
                 TARGET_URL = "https://severeweather.wmo.int/gale/"
             
                 TAR_REQ = requests.get(TARGET_URL).text
-                BS_REQ = BeautifulSoup(TAR_REQ,"lxml")
+                BS_REQ = BeautifulSoup(TAR_REQ,"html.parser")
                     
                 Area_ALL = BS_REQ.find_all("area")
                     
@@ -4285,7 +4285,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
                     ALL_PATH_RAIN = TARGET_URL + REP_DOT_RAIN
                         
                     NEW_TAR_REQ = requests.get(ALL_PATH_RAIN).text
-                    BS_NEW_TAR = BeautifulSoup(NEW_TAR_REQ,"lxml")
+                    BS_NEW_TAR = BeautifulSoup(NEW_TAR_REQ,"html.parser")
                     AREA_NEW_ALL = BS_NEW_TAR.find_all("area")
                         
                     for new_all_loop in AREA_NEW_ALL:
@@ -4304,7 +4304,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
                             TOGETGER_ALL_PATH = PATH_WITH_CLEAR + FIN_JAVA_TAR
                                 
                             LAST_NEW_TAR_REQ = requests.get(TOGETGER_ALL_PATH).text
-                            LAST_BS_NEW_TAR = BeautifulSoup(LAST_NEW_TAR_REQ,"lxml")
+                            LAST_BS_NEW_TAR = BeautifulSoup(LAST_NEW_TAR_REQ,"html.parser")
                                 
                             DIV_COOR = LAST_BS_NEW_TAR.find("td")
                                 
