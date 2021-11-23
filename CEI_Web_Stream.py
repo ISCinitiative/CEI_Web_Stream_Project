@@ -21,14 +21,6 @@ st.set_page_config(page_title="CEI PORTAL",layout="wide",
                    initial_sidebar_state="expanded")
 
 
-"""MAIN_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/BLACK_HEADER.png")
-SUB_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/BANNER.jpg")
-COL_VIS_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/SECURITY_CREW.png")
-COL_SW_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/RED_WARNING_PNG.png")
-COL_ND_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/SPEAK_CREW_PNG.png")
-COL_GS_HEADER_IMAGE = Image.open("./CEI_Web_Stream_Project/MATH_CREW_PNG.png")"""
-
-
 
 try:
     
@@ -986,7 +978,7 @@ if SELECTBOX_SIDEBAR_GENERAL == "HOME":
     
     
     st.header("INTERNATIONAL SPACE SCIENCE AND CLIMATE OBSERVATION INITIATIVE - ISCI")
-    st.markdown("ISCI-Lab was established by ISCI")
+    st.markdown("_ISCI-Lab was established by ISCI_")
     
     COL_VIS, COL_SW, COL_ND, COL_GS = st.columns(4)
     
@@ -3746,13 +3738,10 @@ if SELECTBOX_SIDEBAR_GENERAL == "INTERACTIVE SEARCHING":
 
                 
 if SELECTBOX_SIDEBAR_GENERAL == "LOCAL ALERT":
-    
-        
+
     st.header("LOCAL ALERT PANEL")
     st.markdown("*This section contains the meteorological warning of each country. Other countries will be added as the development phase continues.*")
     st.markdown("_CEI was established by ISCI-LAB_")
-        
-        
     
     st.markdown("_Select country to check latest alerts_")
     SELECT_COUNTRY = st.selectbox("COUNTRIES",("BELGIUM",
